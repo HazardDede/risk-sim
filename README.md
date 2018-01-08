@@ -27,7 +27,7 @@ Cause I will not publish this repo via pypi you have to install it manually with
     virtualenv -p python3 venv && source venv/bin/activate
 
     # Install the dependencies
-    pip install -r requirements.txt
+    pip install -r requirements.txt && pip install -r requirements-dev.txt
 
     # Run the test to see if everything worked fine
     pytest
