@@ -1,9 +1,9 @@
 """Risk Simulator.
 
 Usage:
-  risk_sim.py <attacker> <defender> [-i <iter>] [--attacking-general] [--defending-general]
-  risk_sim.py (-h | --help)
-  risk_sim.py --version
+  risksim <attacker> <defender> [-i <iter>] [--attacking-general] [--defending-general]
+  risksim (-h | --help)
+  risksim --version
 
 Arguments:
   attacker      Number of attacking units (> 1)
@@ -20,9 +20,9 @@ Options:
 from docopt import docopt
 from schema import Schema, And, Use, SchemaError
 
-from sim.model import Army, Context
-from sim.simulator import simulate
-from sim.stats import make_simulation_summary, terminal_result
+from .model import Army, Context
+from .simulator import simulate
+from .stats import make_simulation_summary, terminal_result
 
 validation_schema = Schema({
     '<attacker>': And(Use(int), lambda n: n > 1),

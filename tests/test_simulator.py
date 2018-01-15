@@ -1,6 +1,5 @@
 import random
-
-from sim.simulator import roll_dice, fight
+from risksim.simulator import roll_dice, fight
 
 
 def test_roll_dice():

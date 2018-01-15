@@ -24,7 +24,7 @@ Cause I will not publish this repo via pypi you have to install it manually with
     https://github.com/HazardDede/risk-sim.git && cd risk-sim
 
     # Make a python3 virtualenv
-    virtualenv -p python3 venv && source venv/bin/activate
+    python3 -m venv venv && source venv/bin/activate
 
     # Install the dependencies
     pip install -r requirements.txt && pip install -r requirements-dev.txt
@@ -38,9 +38,9 @@ Cause I will not publish this repo via pypi you have to install it manually with
     Risk Simulator.
 
     Usage:
-      risk_sim.py <attacker> <defender> [-i <iter>] [--attacking-general] [--defending-general]
-      risk_sim.py (-h | --help)
-      risk_sim.py --version
+      risksim <attacker> <defender> [-i <iter>] [--attacking-general] [--defending-general]
+      risksim (-h | --help)
+      risksim --version
 
     Arguments:
       attacker      Number of attacking units (> 1)
@@ -55,7 +55,7 @@ Cause I will not publish this repo via pypi you have to install it manually with
 
 Following these help page you have to
 
-    python risk-sim.py 100 50 --defending-general --iterations=1000
+    python -m risksim 100 50 --defending-general --iterations=1000
 
 to simulate a battle between 100 attacking and 50 defending units, while the defending army is lead by a general (+1 to all rolled dice values).
 The same battle between those units will be repeated and recorded for a 1.000 times, leading to a summary statistic like below:
